@@ -1,0 +1,23 @@
+/* ============================================= */
+/*              Images                           */
+/* ============================================= */
+
+.img {
+  &-avatar {
+    @include img; 
+    max-height: 100%;
+  }
+  &-frame {
+    @include img;
+    padding: 13px;
+    border: 1px solid $gray-light;
+  }
+  &-logo {
+    @include margine-lr($disp: block);
+
+    @media (min-width: $break) {
+      @include margine-lr($left: initial, $right: initial);
+    }
+  }
+ }
+  
