@@ -5,11 +5,11 @@
          <meta charset="utf-8">
          <!-- Informing the browser that the desing is optimize and no zoom out should be applied -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This is the 3th project in the Treehouse Front End Web Development course. An online registration form by Giuseppe Ocello, Student at Treehouse.">
-        <title>The code review</title>
+        <meta name="description" content="This is the 5th project in the Treehouse Front End Web Development course. An online Interactive Image Gallery by Giuseppe Ocello, Student at Treehouse.">
+        <title>The Image Gallery</title>
         <!-- Linking to External fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet">
         <!-- Linking to Stylesheets -->
         <link rel="stylesheet" href="css/normalize.css"> <!-- reseting styles -->
@@ -20,7 +20,10 @@
 
       <body>
          <main>
-            <input type="search" name="search" id="search" placeholder="Search">
+             <div class="search-bar">
+                <input type="search" name="search" id="search" placeholder="Search">
+            </div>
+            
 
             <div class="gallery">
                <a href="img/01.jpg" data-caption="I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
@@ -37,56 +40,49 @@
                </a>
                <a href="img/04.jpg" data-caption="It was amazing to see an iceberg up close, it was so cold but didn’t snow today.">
                    <img src="img/thumbnails/04.jpg" alt="Iceberg">
+                   <p class="overlay">Iceberg</p>
                </a>
                <a href="img/05.jpg" data-caption="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
                    <img src="img/thumbnails/05.jpg" alt="Desert">
+                   <p class="overlay">Desert</p>
                </a>
                <a href="img/06.jpg" data-caption="Fall is coming, I love when the leaves on the trees start to change color.">
                    <img src="img/thumbnails/06.jpg" alt="Fall">
+                   <p class="overlay">Fall</p>
                </a>
                <a href="img/07.jpg" data-caption="I drove past this plantation yesterday, everything is so green!">
                    <img src="img/thumbnails/07.jpg" alt="Plantation">
+                   <p class="overlay">Plantation</p>
                </a>
                <a href="img/08.jpg" data-caption="My summer vacation to the Oregon Coast. I love the sandy dunes!">
                    <img src="img/thumbnails/08.jpg" alt="Dunes">
+                   <p class="overlay">Dunes</p>
                </a>
                <a href="img/09.jpg" data-caption="We enjoyed a quiet stroll down this countryside lane.">
                    <img src="img/thumbnails/09.jpg" alt="Countryside Lane">
+                   <p class="overlay">Countryside Lane</p>
                </a>
                <a href="img/10.jpg" data-caption="Sunset at the coast! The sky turned a lovely shade of orange.">
                   <img src="img/thumbnails/10.jpg" alt="Sunset">
+                  <p class="overlay">Sunset</p>
               </a>
               <a href="img/11.jpg" data-caption="I did a tour of a cave today and the view of the landscape below was breathtaking.">
                   <img src="img/thumbnails/11.jpg" alt="Cave">
+                  <p class="overlay">Cave</p>
                </a>
                <a href="img/12.jpg" data-caption="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
                   <img src="img/thumbnails/12.jpg" alt="Bluebells">
+                  <p class="overlay">Bluebells</p>
                </a>
-               
            </div>
-           
-
-
-
-
-
          </main>
 
          <footer>
-
+            <p>&copy; Copyright <strong>The Image Gallery</strong> By <em>Giuseppe Ocello</em></p>
          </footer>
 
          <script src="js/baguetteBox.min.js"></script>
-         <script src="js/searchFilter.js"></script>
          <script src="js/app.js"></script>​
-         <script>
-            window.addEventListener('load', function() {
-              baguetteBox.run('.gallery');
-            });
-            </script>
       </body>
-
-      
-
 
 </html>

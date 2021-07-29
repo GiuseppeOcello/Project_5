@@ -1,5 +1,5 @@
 /* ========================================================================
-Style for Mobile devices with a Screen size of 320px and smaller
+Style for screen of any size
 =========================================================================== */
 
 /* === Global style and general element selectors === */
@@ -10,9 +10,15 @@ Style for Mobile devices with a Screen size of 320px and smaller
 }
 
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
+   min-height: 100vh;
+   display: flex;
+   margin: 0;
+   flex-direction: column;
+   font-family: 'Montserrat', sans-serif;
 }
+
+
+/* === Input element === */
 
 input {
   display: block;
@@ -48,6 +54,8 @@ input:hover {
 
 }
 
+/* === Gallery === */
+
 .gallery {
    max-width: 850px;
    margin-left: auto;
@@ -72,6 +80,7 @@ img[src^="img/thumbnails/"] {
 
 img[src^="img/thumbnails/"]:hover {
    filter: grayscale(0%);
+   border-radius: 10px;
    box-shadow: 6px 7px 3px 3px rgb(175, 175, 175);
    transform: scale(1.05) translateY(-5px);
 }
@@ -79,6 +88,8 @@ img[src^="img/thumbnails/"]:hover {
 a {
    position: relative;
 }
+
+/* It shows the caption when hovering the picture */
 
 .overlay {
    position: absolute;
@@ -94,221 +105,45 @@ a {
  }
 
 
-
 a:hover .overlay {
    opacity: 1;
 }
 
+/* === Message  === */
 
+.warningCpt {
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   color: red;
+}
+
+.warningImg {
+   max-width: 200px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+/* === Footer === */
+
+footer {
+   margin-top: auto;
+   margin-bottom: 0;
+   padding: 0;
+   text-align: center;
+}
+
+footer > p {
+   margin: 10px 0 0 0;
+}
+
+/* ========================================================================
+Style for Mobile devices with a Screen size of 768px and smaller
+=========================================================================== */
 
 @media screen and (max-width: 768px) {
    input {
       width: 80%;
       height: 40px;
    }
-
-
 }
-
-/*
- ====== Form styling ====== 
- === General form style === 
-
-
-
-input::placeholder {
-   text-align: right;
-   font-style: italic;
-   font-size: .9rem;
-}
-
-input, textarea, select {
-   display: block; 
-   width: 100%;
-   margin: .5rem 0;
-   padding: 1rem; 
-   border: none;
-   border-radius: 8px;
-   font-size: 1.1rem;
-   background-color: #EFF0F1;
-   color: #333;
-}
-
-textarea {
-   min-height: 100px;
-}
-
-input:focus,
-input:active,
-select:focus,
-select:active,
-textarea:focus,
-textarea:active {
-   outline: none;
-   border: 2px solid #4EBBB5;
-   border-radius: 8px;
-   transform: scaleY(1.1);
-   transition: 200ms;
-}
-
-input:hover,
-select:hover,
-textarea:hover {
-   outline: none;
-   background-color: #e7e7e7;
-   transition: 300ms;
-} 
-
- === Fieldset 1 === 
-
-fieldset:first-child {
-   background-image: linear-gradient(to right, #fff, #eff0f1 25%,#fff);
-   border-bottom: 3px solid #2D3945;
-}
-
-select {
-   cursor: pointer;
-}
-
-input[id="zip"] {
-   width: 150px;
-}
-
- === Fieldset 2 === 
-
-label:not([for]) {
-   margin-bottom: 1em;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-   margin-right: 1rem;
-   transform: scale(1.5);
-   padding: 10px;
-}
-
-input[type="checkbox"]:focus,
-input[type="checkbox"]:active,
-input[type="checkbox"]:hover,
-input[type="radio"]:focus,
-input[type="radio"]:active,
-input[type="radio"]:hover {
-   outline: 1px solid #4EBBB5;
-   outline-offset: 1px;
-   transform: scale(2);
-   transition: 200ms;
-   border-color: #4EBBB5;
-   }
-
-input[type="checkbox"],
-input[type="checkbox"] + label,
-input[type="radio"],
-input[type="radio"] + label {
-   display: inline;
-   width: auto;
-}
-
-input[type="checkbox"]:checked + label,
-input[type="radio"]:checked + label {
-   font-weight: 700;
-}
-
-input[type="checkbox"]:hover + label,
-input[type="radio"]:hover + label {
-   font-style: italic;
-}
-
-textarea {
-   height: 100%;
-}
-
- === Non fieldset section === 
-
-button {
-   width: 100%;
-   display: block;
-   margin: auto;
-   padding: 1rem;
-   border: none;
-   border-radius: 8px;
-   font-size: 1.5rem;
-   font-weight: 600;
-   background-color: #4EBBB5;
-   background-size: 200% auto;
-   color: white;
-}
-
-button:hover {
-   background-position: right center;
-   background-image: linear-gradient(to right, #2D3945, #4EBBB5 );
-   transition: 400ms ease-in;
-}
-
- === Accessability === 
-
-i {
-   font-size: 1.5rem;
-   color: red;
-}
-
-i[id^="warning"] {
-   display: none;
-}
-
- === Footer styling === 
-
-footer p {
-   font-size: .8rem;
-}
-
-
- ========================================================================
-Style for Mobile devices with a Screen size of 768px and wider
-=========================================================================== 
-
-@media screen and (min-width: 768px) {
-
- === Header === 
-
-.div-info, form {
-   max-width: 600px;
-   margin:auto;
-}
-
-.div-info {
-   margin: 0 auto 3px;
-}
-
- === Form Fieldset 1 === 
-
-fieldset:first-child {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: flex-start;
-}
-
-input, select {
-   background-image: linear-gradient(to left, #EFF0F1, #fff 25%);
-}
-
-input:hover,
-select:hover {
-   outline: none;
-   background-image: linear-gradient(to left, #EFF0F1, #fff 75%);
-}
-
-fieldset:first-child label {
-   flex-basis: 25%;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-#address3 {
-   flex-basis: 75%; 
-}
-
-#zip {
-   flex-basis: 180px;
-}
-} */
